@@ -9,7 +9,7 @@ const List = require("./models/list.js");
 //no needto require - ejs
 const port = 8080;
 // always define variables 1st- no error while accessing it further
-let url = "mongodb://127.0.0.1:27017/CareStay";//server->db
+let url = "mongodb://127.0.0.1:27017/TravelNest";//server->db
 //DB SERVERs(1)->collections([1model] for [1collection] by [1schema])(1)->many documents
 
 //NOTE: need not write await here 
@@ -31,7 +31,7 @@ app.get("/",(req,res)=>{
 
 app.get("/list",async (req,res)=>{
     let apollo = new List({//creating a document
-        name: "Apollo",
+        title: "Apollo",
         description: "24x7 services",
         price: 0,
         location: "Hyderabad",

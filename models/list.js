@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 //one such model for one collection and viceversa
 //s-1 making schema
 const listSchema = new Schema({//list all fields required-define their datatypes & conditions
-    name : {
+    title : {
         type : String,//field keys - type,required,default,set,get
         required : true
     },

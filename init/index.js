@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const data = require("./data.js");
 const List = require("../models/list.js");
 
-let url = "mongodb://127.0.0.1:27017/CareStay";
+let url = "mongodb://127.0.0.1:27017/TravelNest";
 main().then((res)=>{
     console.log("successfully connected");
 }).catch((err)=>{
