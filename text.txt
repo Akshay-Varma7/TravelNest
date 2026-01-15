@@ -1,4 +1,4 @@
 (nodemon)
-ejs need not require + but install
+ejs,method-override need not require + but install
 1.npm init -y
 2.npm i express, ejs, mongoose

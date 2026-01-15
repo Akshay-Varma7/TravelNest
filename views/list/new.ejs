@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest</title>
+</head>
+<body>
+    <a href="/list">HOME</a>
+    <h3>Create A New List : </h3>
+    <form method="POST" action="/list"><!--send as body(from res)-->
+        <input name="list[title]" placeholder="enter title" type="text">
+        <br><br>
+        <input name="list[description]" placeholder="enter description" type="text">
+        <br><br>
+        <input name="list[image]" placeholder="enter image URL/link" type="text">
+        <br><br>
+        <input name="list[price]" placeholder="enter price" type="number">
+        <br><br>
+        <input name="list[location]" placeholder="enter location" type="text">
+        <br><br>
+        <input name="list[country]" placeholder="enter country" type="text">
+        <br><br><br>
+        <button>Add List</button>
+    </form>
+</body>
+</html>

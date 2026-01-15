@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest</title>
+</head>
+<body>
+    <a href="/list">HOME</a>
+    <h3>Edit List : </h3>
+    <form method="POST" action="/list/<%=list._id%>?_method=PUT">
+        <input name="list[title]" value="<%=list.title%>" type="text"><!--due to value already exists-->
+        <br><br>
+        <textarea name="list[description]" type="text"><%=list.description%></textarea>
+        <br><br>
+        <input name="list[image]" value="<%=list.image%>" type="text">
+        <br><br>
+        <input name="list[price]" value="<%=list.price%>" type="number">
+        <br><br>
+        <input name="list[location]" value="<%=list.location%>" type="text">
+        <br><br>
+        <input name="list[country]" value="<%=list.country%>" type="text">
+        <br><br><br>
+        <button>Edit List</button>
+    </form>
+</body>
+</html>

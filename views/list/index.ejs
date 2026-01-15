@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest</title>
+</head>
+<body>
+    <h3>all list</h3>
+    <!--instead of anchor-->
+    <form action="/list/new" method="GET"><!--get req-->
+        <button>Create New List</button>
+    </form>
+    <ul>
+        <% for(let list of allList){ %>
+            <li><a href="/list/<%=list._id%>"><%= list.title%></a></li><!--send as params(from req)-->
+        <% } %>
+    </ul>
+</body>
+</html>
