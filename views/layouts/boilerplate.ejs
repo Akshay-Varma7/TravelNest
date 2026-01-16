@@ -1,0 +1,17 @@
+<!--all pages of website's layout has this-->
+<!--for same styling changes we need not change in all files-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>TravelNest</h1>
+    <div class="container"><%- body %></div><!--here the body==child page html(where this layout is added) is rendered-->
+    <!--when layout is called instead of using it where it should come like includes ,ejs-mate automatically first displays it and then that page-->
+    <h1>ending</h1>
+</body>
+</html>

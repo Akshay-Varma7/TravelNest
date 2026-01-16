@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 const List = require("./models/list.js");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");//templating navbar(header),footer-like ejs includes("path")+partials(folder inside views)
+//this has layouts folder in views instead of partials + layout("path")
 
 app.set("view engine","ejs");//s-1 setting viewing engine to ejs
 app.set("views",path.join(__dirname,"views"));//s-2 joining folder of views
@@ -12,6 +14,11 @@ app.set("views",path.join(__dirname,"views"));//s-2 joining folder of views
 app.use(express.urlencoded({extended : true}));
 //middleware for method override
 app.use(methodOverride("_method"));
+
+app.engine("ejs",ejsMate);//for templating (our choice to use it or not)
+//for static files(css,images,videos)- folder
+app.use(express.static(path.join(__dirname,"/public")));
+
 
 // "./"-same folder & "../ "-go one level up folder - are relative paths
 
